@@ -16,6 +16,7 @@ services:
     volumes:
       - debug_db_data:/var/lib/mysql 
       - /home/mihai/docker/labs/developer-tools/java-debugging/registration-database/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - /home/mihai/docker/labs/developer-tools/java-debugging/registration-database/mysqld_custom:/etc/mysql/conf.d
     ports:
       - "3306:3306" 
     restart: always
